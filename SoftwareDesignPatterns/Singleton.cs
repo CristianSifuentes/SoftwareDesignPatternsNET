@@ -22,3 +22,4 @@ public class Singleton
         Console.WriteLine("Ejecutando la lógica de negocio en Singleton.");
     }
 }
+
