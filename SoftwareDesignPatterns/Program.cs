@@ -16,3 +16,4 @@
         singleton1.SomeBusinessLogic();
     }
 }
+
