@@ -1,4 +1,7 @@
-﻿class Program
+﻿using System;
+
+
+class Program
 {
     static void Main(string[] args)
     {
@@ -14,6 +17,19 @@
         
         // Ejecuta la lógica de negocio en la instancia del Singleton.
         singleton1.SomeBusinessLogic();
+
+
+
+        // Creamos varios hilos que intentarán acceder al Singleton.
+        for (int i = 0; i < 5; i++)
+        {
+            var thread = new System.Threading.Thread(() =>
+            {
+                var singleton = ThreadSafeSingleton.GetInstance();
+                singleton.SomeBusinessLogic();
+            });
+            thread.Start();
+        }
     }
 }
 
