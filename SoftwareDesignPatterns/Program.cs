@@ -5,6 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        #region Singleton
         // Intenta obtener la instancia del Singleton.
         Singleton singleton1 = Singleton.GetInstance();
         Singleton singleton2 = Singleton.GetInstance();
@@ -43,10 +44,23 @@ class Program
             return list;
         });
 
-       
        // En algún otro lugar del código, cuando se necesita la lista:
-       List<int> lista = lazyList.Value; // La lista se inicializa en este momento, si aún no se ha hecho.
+        List<int> lista = lazyList.Value; // La lista se inicializa en este momento, si aún no se ha hecho.
 
+       #endregion 
+       
+
+
+       // Crear instancias usando los Factory Methods
+        EnemyFactory basicFactory = new BasicEnemyFactory();
+        IEnemy basicEnemy = basicFactory.CreateEnemy();
+
+        EnemyFactory advancedFactory = new AdvancedEnemyFactory();
+        IEnemy advancedEnemy = advancedFactory.CreateEnemy();
+
+        // Utilizar los enemigos
+        basicEnemy.Attack();    // Salida: El enemigo básico ataca.
+        advancedEnemy.Attack(); // Salida: El enemigo avanzado ataca.
 
     }
 }
