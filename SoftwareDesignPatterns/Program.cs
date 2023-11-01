@@ -50,18 +50,20 @@ class Program
        #endregion 
        
 
+       #region  FactoryMethod
+        
 
-       // Crear instancias usando los Factory Methods
+        // Crear instancias usando los Factory Methods
         EnemyFactory basicFactory = new BasicEnemyFactory();
         IEnemy basicEnemy = basicFactory.CreateEnemy();
 
         EnemyFactory advancedFactory = new AdvancedEnemyFactory();
         IEnemy advancedEnemy = advancedFactory.CreateEnemy();
 
-        // Utilizar los enemigos
-        basicEnemy.Attack();    // Salida: El enemigo básico ataca.
-        advancedEnemy.Attack(); // Salida: El enemigo avanzado ataca.
-
+            // Utilizar los enemigos
+            basicEnemy.Attack();    // Salida: El enemigo básico ataca.
+            advancedEnemy.Attack(); // Salida: El enemigo avanzado ataca.
+        #endregion
     }
 }
 
