@@ -64,6 +64,18 @@ class Program
             basicEnemy.Attack();    // Salida: El enemigo básico ataca.
             advancedEnemy.Attack(); // Salida: El enemigo avanzado ataca.
         #endregion
+
+
+        #region 
+        ProductFactory factory = ProductFactory.GetInstance();
+
+        Product productA = factory.CreateProduct("ProductA");
+        Product productB = factory.CreateProduct("ProductB");
+
+        productA.Display(); // Salida: Product A
+        productB.Display(); // Salida: Product B
+
+        #endregion
     }
 }
 
