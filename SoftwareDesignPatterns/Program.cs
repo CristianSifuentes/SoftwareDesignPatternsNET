@@ -50,9 +50,7 @@ class Program
        #endregion 
        
 
-       #region  FactoryMethod
-        
-
+        #region  FactoryMethod
         // Crear instancias usando los Factory Methods
         EnemyFactory basicFactory = new BasicEnemyFactory();
         IEnemy basicEnemy = basicFactory.CreateEnemy();
@@ -66,7 +64,7 @@ class Program
         #endregion
 
 
-        #region 
+        #region SingletonFactoryMethod
         ProductFactory factory = ProductFactory.GetInstance();
 
         Product productA = factory.CreateProduct("ProductA");
@@ -76,6 +74,18 @@ class Program
         productB.Display(); // Salida: Product B
 
         #endregion
+        
+        #region 
+        IVehicleFactory urbanFactory = new UrbanVehicleFactory();
+        IVehicleFactory ruralFactory = new RuralVehicleFactory();
+
+        Client urbanClient = new Client(urbanFactory);
+        Client ruralClient = new Client(ruralFactory);
+
+        urbanClient.Build();
+        ruralClient.Build();
+        #endregion
+   
     }
 }
 
