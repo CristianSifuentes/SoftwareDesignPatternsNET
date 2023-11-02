@@ -51,6 +51,14 @@ class Program
        
 
         #region  FactoryMethod
+
+        /*
+        Esto ilustra cómo el patrón Factory Method permite crear objetos de una jerarquía común a través de métodos de fábrica especializados en las subclases, 
+        brindando flexibilidad y extensibilidad al sistema para manejar diferentes tipos de objetos.
+        
+        */
+
+
         // Crear instancias usando los Factory Methods
         EnemyFactory basicFactory = new BasicEnemyFactory();
         IEnemy basicEnemy = basicFactory.CreateEnemy();
@@ -75,7 +83,7 @@ class Program
 
         #endregion
         
-        #region 
+        #region AbstractFactory
         IVehicleFactory urbanFactory = new UrbanVehicleFactory();
         IVehicleFactory ruralFactory = new RuralVehicleFactory();
 
