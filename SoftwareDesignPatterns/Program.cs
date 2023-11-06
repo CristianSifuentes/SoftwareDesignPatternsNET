@@ -5,6 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        
         #region Singleton
         // Intenta obtener la instancia del Singleton.
         Singleton singleton1 = Singleton.GetInstance();
