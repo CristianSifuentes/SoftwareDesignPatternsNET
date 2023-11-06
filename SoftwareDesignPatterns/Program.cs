@@ -95,6 +95,16 @@ class Program
         ruralClient.Build();
         #endregion
    
+        #region Builder 
+        var manufacturer = new VehicleManufacturer();
+        var carBuilder = new CarBuilder();
+
+        manufacturer.Construct(carBuilder);
+
+        Vehicle car = carBuilder.GetVehicle();
+        Console.WriteLine("Car Details:");
+        car.DisplayDetails();
+        #endregion
     }
 }
 

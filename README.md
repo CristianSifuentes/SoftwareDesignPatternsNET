@@ -24,7 +24,7 @@ Garantiza que una clase tenga una única instancia y proporciona un punto de acc
 
 Define una interfaz para crear un objeto, pero permite a las subclases alterar el tipo de objetos que se crearán.
 
-### Abstract Factory
+## Abstract Factory
 
 Proporciona una interfaz para crear familias de objetos relacionados o dependientes sin especificar sus clases concretas.
 
