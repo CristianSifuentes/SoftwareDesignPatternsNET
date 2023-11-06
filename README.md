@@ -9,12 +9,31 @@ https://www.c-sharpcorner.com/article/how-to-use-visual-studio-code-for-net-deve
 
 https://support.atlassian.com/bitbucket-cloud/docs/configure-your-dvcs-username-for-commits/
 
+## Documentation
 
-Singleton (Singleton Pattern): Garantiza que una clase tenga una única instancia y proporciona un punto de acceso global a esa instancia.
+* [Singleton](#singleton)
+* [Factory Method ](#factory-method )
+* [Abstract Factory](#abstract-factory)
 
-Factory Method (Patrón de Fábrica): Define una interfaz para crear un objeto, pero permite a las subclases alterar el tipo de objetos que se crearán.
 
-Abstract Factory (Patrón de Fábrica Abstracta): Proporciona una interfaz para crear familias de objetos relacionados o dependientes sin especificar sus clases concretas.
+## Singleton
+
+Garantiza que una clase tenga una única instancia y proporciona un punto de acceso global a esa instancia.
+
+## Factory Method 
+
+Define una interfaz para crear un objeto, pero permite a las subclases alterar el tipo de objetos que se crearán.
+
+### Abstract Factory
+
+Proporciona una interfaz para crear familias de objetos relacionados o dependientes sin especificar sus clases concretas.
+
+
+Singleton (Singleton Pattern): 
+
+Factory Method (Patrón de Fábrica): 
+
+Abstract Factory (Patrón de Fábrica Abstracta): 
 
 Builder (Patrón Constructor): Separación de la construcción de un objeto complejo de su representación, de modo que el mismo proceso de construcción pueda crear diferentes representaciones.
 
