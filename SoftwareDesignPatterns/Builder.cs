@@ -3,50 +3,50 @@ using System;
 // Product (Producto)
 class Vehicle
 {
-    public string Engine { get; set; }
-    public string Body { get; set; }
-    public string AdditionalFeatures { get; set; }
+    public string BuilderEngine { get; set; }
+    public string BuilderBody { get; set; }
+    public string BuilderAdditionalFeatures { get; set; }
 
     public void DisplayDetails()
     {
-        Console.WriteLine($"Engine: {Engine}");
-        Console.WriteLine($"Body: {Body}");
-        Console.WriteLine($"Additional Features: {AdditionalFeatures}");
+        Console.WriteLine($"BuilderEngine: {BuilderEngine}");
+        Console.WriteLine($"BuilderBody: {BuilderBody}");
+        Console.WriteLine($"Additional Features: {BuilderAdditionalFeatures}");
     }
 }
 
 // Builder (Constructor)
 interface IVehicleBuilder
 {
-    void SetEngine();
-    void SetBody();
-    void SetAdditionalFeatures();
+    void SetBuilderEngine();
+    void SetBuilderBody();
+    void SetBuilderAdditionalFeatures();
     Vehicle GetVehicle();
 }
 
 // Concrete Builder (ConstructorConcreto)
 class CarBuilder : IVehicleBuilder
 {
-    private readonly Vehicle _vehicle = new Vehicle();
+    private readonly Vehicle _vehicleBuilder = new Vehicle();
 
-    public void SetEngine()
+    public void SetBuilderEngine()
     {
-        _vehicle.Engine = "1500cc";
+        _vehicleBuilder.BuilderEngine = "1500cc";
     }
 
-    public void SetBody()
+    public void SetBuilderBody()
     {
-        _vehicle.Body = "Hatchback";
+        _vehicleBuilder.BuilderBody = "Hatchback";
     }
 
-    public void SetAdditionalFeatures()
+    public void SetBuilderAdditionalFeatures()
     {
-        _vehicle.AdditionalFeatures = "Sunroof, Rear Spoiler";
+        _vehicleBuilder.BuilderAdditionalFeatures = "Sunroof, Rear Spoiler";
     }
 
     public Vehicle GetVehicle()
     {
-        return _vehicle;
+        return _vehicleBuilder;
     }
 }
 
@@ -55,8 +55,8 @@ class VehicleManufacturer
 {
     public void Construct(IVehicleBuilder builder)
     {
-        builder.SetEngine();
-        builder.SetBody();
-        builder.SetAdditionalFeatures();
+        builder.SetBuilderEngine();
+        builder.SetBuilderBody();
+        builder.SetBuilderAdditionalFeatures();
     }
 }

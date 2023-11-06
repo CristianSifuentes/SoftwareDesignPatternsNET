@@ -50,7 +50,6 @@ class Program
 
        #endregion 
        
-
         #region  FactoryMethod
 
         /*
@@ -71,7 +70,6 @@ class Program
             basicEnemy.Attack();    // Salida: El enemigo básico ataca.
             advancedEnemy.Attack(); // Salida: El enemigo avanzado ataca.
         #endregion
-
 
         #region SingletonFactoryMethod
         ProductFactory factory = ProductFactory.GetInstance();
@@ -105,6 +103,47 @@ class Program
         Console.WriteLine("Car Details:");
         car.DisplayDetails();
         #endregion
+   
+        #region AbstractFactoryBuilder
+        AbstractFactoryBuilderExample.IVehicleFactory abstractFactoryBuilderFactory = new AbstractFactoryBuilderExample.CarFactory();
+        AbstractFactoryBuilderExample.IVehicleBuilder builder = abstractFactoryBuilderFactory.CreateBuilder();
+
+        builder.SetEngine();
+        builder.SetBody();
+        builder.SetAdditionalFeatures();
+
+        AbstractFactoryBuilderExample.Vehicle carAbstractFactoryBuilder = builder.GetVehicle();
+        carAbstractFactoryBuilder.DisplayDetails();
+
+        #endregion
+        
+        #region PrototypeBuilder
+        PrototypeBuilderExample.IVehicleBuilder builderPrototypeBuilder = new PrototypeBuilderExample.CarBuilder();
+
+        builderPrototypeBuilder.SetEngine();
+        builderPrototypeBuilder.SetBody();
+        builderPrototypeBuilder.SetAdditionalFeatures();
+
+        PrototypeBuilderExample.IVehiclePrototype prototypeBuilder = builderPrototypeBuilder.GetVehicle();
+
+        Console.WriteLine("Car Details:");
+        Console.WriteLine($"Engine: {prototypeBuilder.Engine}");
+        Console.WriteLine($"Body: {prototypeBuilder.Body}");
+        Console.WriteLine($"Additional Features: {prototypeBuilder.AdditionalFeatures}");
+
+        #endregion
+        
+        #region SingletonBuilder
+        SingletonBuilderExample.SingletonBuilder singletonBuilder = SingletonBuilderExample.SingletonBuilder.GetInstance();
+
+        singletonBuilder.SetEngine();
+        singletonBuilder.SetBody();
+        singletonBuilder.SetAdditionalFeatures();
+
+        SingletonBuilderExample.Vehicle carSingletonBuilder = singletonBuilder.GetVehicle();
+        carSingletonBuilder.DisplayDetails();
+        #endregion
+   
     }
 }
 
