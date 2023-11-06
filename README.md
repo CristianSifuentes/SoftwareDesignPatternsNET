@@ -15,6 +15,7 @@ https://support.atlassian.com/bitbucket-cloud/docs/configure-your-dvcs-username-
 * [Factory Method ](#factory-method )
 * [Abstract Factory](#abstract-factory)
 * [Builder](#builder)
+* [Prototype](#prototype)
 
 
 ## Singleton
@@ -33,6 +34,11 @@ Proporciona una interfaz para crear familias de objetos relacionados o dependien
 
 Separación de la construcción de un objeto complejo de su representación, de modo que el mismo proceso de construcción pueda crear diferentes representaciones.
 
+## Prototype
+
+Especifica los tipos de objetos a crear mediante una instancia prototípica y crea nuevos objetos copiando este prototipo.
+
+
 Singleton (Singleton Pattern): 
 
 Factory Method (Patrón de Fábrica): 
@@ -41,7 +47,7 @@ Abstract Factory (Patrón de Fábrica Abstracta):
 
 Builder (Patrón Constructor): 
 
-Prototype (Patrón Prototipo): Especifica los tipos de objetos a crear mediante una instancia prototípica y crea nuevos objetos copiando este prototipo.
+Prototype (Patrón Prototipo): 
 
 Adapter (Patrón Adaptador): Permite que objetos con interfaces incompatibles trabajen juntos.
 

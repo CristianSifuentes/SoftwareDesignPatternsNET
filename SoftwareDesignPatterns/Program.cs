@@ -50,7 +50,7 @@ class Program
 
        #endregion 
        
-        #region  FactoryMethod
+        #region FactoryMethod
 
         /*
         Esto ilustra cómo el patrón Factory Method permite crear objetos de una jerarquía común a través de métodos de fábrica especializados en las subclases, 
@@ -143,7 +143,26 @@ class Program
         SingletonBuilderExample.Vehicle carSingletonBuilder = singletonBuilder.GetVehicle();
         carSingletonBuilder.DisplayDetails();
         #endregion
-   
+
+        #region Prototype
+        // Prototipo base
+        PrototypePatternExample.IVehiclePrototype baseCar = new PrototypePatternExample.Car { Model = "Sedan", Color = "Black" };
+
+        // Clonación del prototipo para crear instancias con diferentes configuraciones
+        PrototypePatternExample.IVehiclePrototype car1 = baseCar.Clone();
+        car1.SetAdditionalFeatures("Sunroof, GPS");
+
+        PrototypePatternExample.IVehiclePrototype car2 = baseCar.Clone();
+        car2.SetAdditionalFeatures("Leather Seats, Backup Camera");
+
+        // Imprimir detalles de los vehículos
+        Console.WriteLine("Car 1 Details:");
+        car1.PrintDetails();
+
+        Console.WriteLine("\nCar 2 Details:");
+        car2.PrintDetails();
+        #endregion      
+
     }
 }
 
