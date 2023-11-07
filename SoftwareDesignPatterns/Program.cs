@@ -161,7 +161,16 @@ class Program
 
         Console.WriteLine("\nCar 2 Details:");
         car2.PrintDetails();
-        #endregion      
+        #endregion 
+
+        #region Adapter
+        // Utilizando el Adapter para adaptar el formato de datos existente
+        AdapterPatternExample.IAdaptee adaptee = new AdapterPatternExample.Adaptee();
+        AdapterPatternExample.ITarget adapter = new AdapterPatternExample.Adapter(adaptee);
+
+        AdapterPatternExample.Client client = new AdapterPatternExample.Client();
+        client.ProcessRequest(adapter);
+        #endregion     
 
     }
 }
