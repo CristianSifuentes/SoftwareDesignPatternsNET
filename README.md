@@ -16,6 +16,22 @@ https://support.atlassian.com/bitbucket-cloud/docs/configure-your-dvcs-username-
 * [Abstract Factory](#abstract-factory)
 * [Builder](#builder)
 * [Prototype](#prototype)
+* [Adapter](#adapter)
+* [Decorator](#decorator)
+* [Observer](#observer)
+* [Strategy](#strategy)
+* [Command](#command)
+* [State](#state)
+* [Memento](#memento)
+* [Template Method](#template-method)
+* [Chain of Responsibility](#chain-of-responsibility)
+* [Visitor](#visitor)
+* [Composite](#composite)
+* [Proxy](#proxy)
+* [Flyweight](#flyweight)
+* [Bridge](#bridge)
+* [Interpreter](#interpreter)
+
 
 
 ## Singleton
@@ -38,43 +54,63 @@ Separación de la construcción de un objeto complejo de su representación, de 
 
 Especifica los tipos de objetos a crear mediante una instancia prototípica y crea nuevos objetos copiando este prototipo.
 
+## Adapter
 
-Singleton (Singleton Pattern): 
+Permite que objetos con interfaces incompatibles trabajen juntos.
 
-Factory Method (Patrón de Fábrica): 
+## Decorator
 
-Abstract Factory (Patrón de Fábrica Abstracta): 
+Adjunta responsabilidades adicionales a un objeto de manera dinámica.
 
-Builder (Patrón Constructor): 
+## Observer
 
-Prototype (Patrón Prototipo): 
+Define una dependencia uno a muchos entre objetos para que cuando un objeto cambie su estado, todos sus dependientes sean notificados y actualizados automáticamente.
 
-Adapter (Patrón Adaptador): Permite que objetos con interfaces incompatibles trabajen juntos.
+## Strategy
 
-Decorator (Patrón Decorador): Adjunta responsabilidades adicionales a un objeto de manera dinámica.
+Define una familia de algoritmos, encapsula cada uno de ellos y los hace intercambiables.
 
-Observer (Patrón Observador): Define una dependencia uno a muchos entre objetos para que cuando un objeto cambie su estado, todos sus dependientes sean notificados y actualizados automáticamente.
+## Command
 
-Strategy (Patrón Estrategia): Define una familia de algoritmos, encapsula cada uno de ellos y los hace intercambiables.
+Encapsula una solicitud como un objeto, permitiendo parametrizar a los clientes con operaciones, poner en cola las solicitudes y soportar operaciones deshacer.
 
-Command (Patrón Comando): Encapsula una solicitud como un objeto, permitiendo parametrizar a los clientes con operaciones, poner en cola las solicitudes y soportar operaciones deshacer.
+## State
 
-State (Patrón Estado): Permite a un objeto alterar su comportamiento cuando su estado interno cambia.
+Permite a un objeto alterar su comportamiento cuando su estado interno cambia.
 
-Memento (Patrón Mememto): Captura y externaliza un estado interno de un objeto, de modo que el objeto pueda ser restaurado a ese estado más tarde.
+## Memento
 
-Template Method (Patrón Método de Plantilla): Define el esqueleto de un algoritmo en una operación, postergando algunos pasos a las subclases.
+Captura y externaliza un estado interno de un objeto, de modo que el objeto pueda ser restaurado a ese estado más tarde.
 
-Chain of Responsibility (Patrón Cadena de Responsabilidad): Pasa la solicitud a lo largo de una cadena de manejadores. Permite que más de un objeto maneje la solicitud sin especificar explícitamente el receptor.
+## Template Method
 
-Visitor (Patrón Visitante): Representa una operación que se realiza en los elementos de una estructura de objetos. Permite definir una nueva operación sin cambiar las clases de los elementos.
+Define el esqueleto de un algoritmo en una operación, postergando algunos pasos a las subclases.
 
-Composite (Patrón Composición): Compone objetos en estructuras de árbol para representar jerarquías parte-todo. Permite a los clientes tratar objetos individuales y composiciones de objetos de manera uniforme.
+## Chain of Responsibility
 
-Proxy (Patrón Proxy): Proporciona un sustituto o marcador de posición para otro objeto para controlar el acceso a él.
+Pasa la solicitud a lo largo de una cadena de manejadores. Permite que más de un objeto maneje la solicitud sin especificar explícitamente el receptor.
 
-Flyweight (Patrón Peso Ligero): Minimiza el uso de memoria o cálculos compartiendo tanto como sea posible con objetos relacionados.
+## Visitor
 
-Bridge (Patrón Puente): Desacopla una abstracción de su implementación, de modo que las dos puedan variar independientemente.
+Representa una operación que se realiza en los elementos de una estructura de objetos. Permite definir una nueva operación sin cambiar las clases de los elementos.
 
-Interpreter (Patrón Intérprete): Proporciona una manera de evaluar el lenguaje gramatical de un idioma.
+## Composite
+
+Compone objetos en estructuras de árbol para representar jerarquías parte-todo. Permite a los clientes tratar objetos individuales y composiciones de objetos de manera uniforme.
+
+## Proxy
+
+Proporciona un sustituto o marcador de posición para otro objeto para controlar el acceso a él.
+
+## Flyweight
+
+Minimiza el uso de memoria o cálculos compartiendo tanto como sea posible con objetos relacionados.
+
+## Bridge
+
+Desacopla una abstracción de su implementación, de modo que las dos puedan variar independientemente.
+
+## Interpreter
+
+Proporciona una manera de evaluar el lenguaje gramatical de un idioma.
+ 
