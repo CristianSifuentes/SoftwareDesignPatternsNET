@@ -193,6 +193,20 @@ class Program
         compositeAdapter.Request();
         #endregion
 
+
+        #region Decorator
+        // Café sencillo
+        DecoratorPatternExample.ICoffee coffee = new DecoratorPatternExample.SimpleCoffee();
+        Console.WriteLine($"Café: {coffee.GetDescription()} - Costo: ${coffee.GetCost()}");
+
+        // Café con leche
+        DecoratorPatternExample.ICoffee coffeeWithMilk = new DecoratorPatternExample.MilkDecorator(new DecoratorPatternExample.SimpleCoffee());
+        Console.WriteLine($"Café: {coffeeWithMilk.GetDescription()} - Costo: ${coffeeWithMilk.GetCost()}");
+
+        // Café con leche y azúcar
+        DecoratorPatternExample.ICoffee coffeeWithMilkAndSugar = new DecoratorPatternExample.SugarDecorator(new DecoratorPatternExample.MilkDecorator(new DecoratorPatternExample.SimpleCoffee()));
+        Console.WriteLine($"Café: {coffeeWithMilkAndSugar.GetDescription()} - Costo: ${coffeeWithMilkAndSugar.GetCost()}");
+        #endregion
     }
 }
 
