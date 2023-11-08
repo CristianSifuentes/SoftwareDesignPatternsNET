@@ -170,7 +170,28 @@ class Program
 
         AdapterPatternExample.Client client = new AdapterPatternExample.Client();
         client.ProcessRequest(adapter);
-        #endregion     
+        #endregion    
+
+        #region AdapterFactoryMethod
+        AdapterFactoryMethodExample.AdapterFactory factoryAdapterFactoryMethod = new AdapterFactoryMethodExample.AdapterFactory();
+        AdapterFactoryMethodExample.ITarget adapterAdapterFactoryMethod = factoryAdapterFactoryMethod.CreateAdapter();
+
+        adapterAdapterFactoryMethod.Request();
+
+        #endregion 
+
+        #region AdapterComposite
+        AdapterCompositeExample.Adaptee adapteeComposite = new AdapterCompositeExample.Adaptee();
+
+        AdapterCompositeExample.Adapter adapter1 = new AdapterCompositeExample.Adapter(adapteeComposite);
+        AdapterCompositeExample.Adapter adapter2 = new AdapterCompositeExample.Adapter(adapteeComposite);
+
+        AdapterCompositeExample.CompositeAdapter compositeAdapter = new AdapterCompositeExample.CompositeAdapter();
+        compositeAdapter.Add(adapter1);
+        compositeAdapter.Add(adapter2);
+
+        compositeAdapter.Request();
+        #endregion
 
     }
 }
