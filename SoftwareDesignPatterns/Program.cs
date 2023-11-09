@@ -207,6 +207,29 @@ class Program
         DecoratorPatternExample.ICoffee coffeeWithMilkAndSugar = new DecoratorPatternExample.SugarDecorator(new DecoratorPatternExample.MilkDecorator(new DecoratorPatternExample.SimpleCoffee()));
         Console.WriteLine($"Café: {coffeeWithMilkAndSugar.GetDescription()} - Costo: ${coffeeWithMilkAndSugar.GetCost()}");
         #endregion
+
+        #region DecoratorAdapter
+            // Se adapta el OtherService a la interfaz ITarget usando el Adapter
+        DecoratorAdapterExample.OtherService otherService = new DecoratorAdapterExample.OtherService();
+        DecoratorAdapterExample.ITarget adaptedTarget = new DecoratorAdapterExample.Adapter(otherService);
+
+            // Se decora el objeto adaptado
+        DecoratorAdapterExample.ITarget decoratedTarget = new DecoratorAdapterExample.Decorator(adaptedTarget);
+
+            // Se realiza la operación del decorador, que ejecutará la operación del OtherService adaptada
+        decoratedTarget.DoSomething();
+        #endregion
+
+        #region 
+        DecoratorCompositeExample.ITarget originalComponent = new DecoratorCompositeExample.OriginalComponent();
+        DecoratorCompositeExample.ITarget decoratedComponent = new DecoratorCompositeExample.Decorator(originalComponent);
+
+        DecoratorCompositeExample.Composite composite = new DecoratorCompositeExample.Composite();
+        composite.Add(decoratedComponent);
+        composite.Add(new DecoratorCompositeExample.Decorator(new DecoratorCompositeExample.OriginalComponent()));
+
+        composite.DoSomething();
+        #endregion
     }
 }
 
