@@ -1,116 +1,162 @@
-# SoftwareDesignPatternsNET
-This is a repository for learn about software design patterns using NET infrastructure and C# language
+# Software Design Patterns in .NET
 
-# Visual Studio
-https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
+This repository is dedicated to the study and mastery of software design patterns using the .NET infrastructure and the C# language. This document is enriched with historical, technical, and professional information and resources to help achieve advanced mastery of these patterns.
 
+---
 
-https://www.c-sharpcorner.com/article/how-to-use-visual-studio-code-for-net-development-with-net-7/#:~:text=Hence%2C%20in%20this%20article%2C%20we,use%20Visual%20Studio%20code%20for%20.
+## Table of Contents
 
-https://support.atlassian.com/bitbucket-cloud/docs/configure-your-dvcs-username-for-commits/
+1. [Introduction to Design Patterns](#introduction-to-design-patterns)
+2. [Pattern Classification](#pattern-classification)
+3. [Origin and Historical Evolution](#origin-and-historical-evolution)
+4. [Creational Patterns](#creational-patterns)
+    - [Singleton](#singleton)
+    - [Factory Method](#factory-method)
+    - [Abstract Factory](#abstract-factory)
+    - [Builder](#builder)
+    - [Prototype](#prototype)
+5. [Structural Patterns](#structural-patterns)
+    - [Adapter](#adapter)
+    - [Decorator](#decorator)
+    - [Proxy](#proxy)
+    - [Composite](#composite)
+    - [Flyweight](#flyweight)
+    - [Bridge](#bridge)
+    - [Facade](#facade-suggested-to-be-added)
+6. [Behavioral Patterns](#behavioral-patterns)
+    - [Observer](#observer)
+    - [Strategy](#strategy)
+    - [Command](#command)
+    - [State](#state)
+    - [Memento](#memento)
+    - [Template Method](#template-method)
+    - [Chain of Responsibility](#chain-of-responsibility)
+    - [Visitor](#visitor)
+    - [Interpreter](#interpreter)
+7. [Applications in .NET and C#](#applications-in-net-and-c)
+8. [Professional and Advanced Level](#professional-and-advanced-level)
+9. [Recommended Books and Resources](#recommended-books-and-resources)
+10. [References](#references)
 
-## Documentation
+---
 
-* [Singleton](#singleton)
-* [Factory Method ](#factory-method )
-* [Abstract Factory](#abstract-factory)
-* [Builder](#builder)
-* [Prototype](#prototype)
-* [Adapter](#adapter)
-* [Decorator](#decorator)
-* [Observer](#observer)
-* [Strategy](#strategy)
-* [Command](#command)
-* [State](#state)
-* [Memento](#memento)
-* [Template Method](#template-method)
-* [Chain of Responsibility](#chain-of-responsibility)
-* [Visitor](#visitor)
-* [Composite](#composite)
-* [Proxy](#proxy)
-* [Flyweight](#flyweight)
-* [Bridge](#bridge)
-* [Interpreter](#interpreter)
+## Introduction to Design Patterns
 
+Design patterns are reusable and proven solutions to common software design problems. In .NET, they allow developers to build cleaner, more maintainable, and scalable applications.
 
+## Pattern Classification
 
-## Singleton
+- **Creational**: Manage object creation.
+- **Structural**: Focus on class and object composition.
+- **Behavioral**: Describe how objects interact with each other.
 
-Garantiza que una clase tenga una única instancia y proporciona un punto de acceso global a esa instancia.
+## Origin and Historical Evolution
 
-## Factory Method 
+Design patterns were popularized by the book *"Design Patterns: Elements of Reusable Object-Oriented Software"* (1994) by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides, known as the "Gang of Four" (GoF). Their ideas have been adapted to many languages, including C# and the .NET platform.
 
-Define una interfaz para crear un objeto, pero permite a las subclases alterar el tipo de objetos que se crearán.
+## Creational Patterns
 
-## Abstract Factory
+### Singleton
+**Purpose**: Ensures a class has only one instance.  
+**Usage in .NET**: Commonly used for configuration or logging.  
+**Example**: `Lazy<T>` + `private constructor`
 
-Proporciona una interfaz para crear familias de objetos relacionados o dependientes sin especificar sus clases concretas.
+### Factory Method
+**Purpose**: Defines an interface for creating an object, deferring instantiation to subclasses.  
+**Usage in .NET**: Enables flexibility in changing concrete types.
 
-## Builder
+### Abstract Factory
+**Purpose**: Creates families of related objects without specifying their concrete classes.  
+**Usage**: Multiplatform GUI systems.
 
-Separación de la construcción de un objeto complejo de su representación, de modo que el mismo proceso de construcción pueda crear diferentes representaciones.
+### Builder
+**Purpose**: Builds complex objects step by step.  
+**Usage**: Fluent API or LINQ query builders.
 
-## Prototype
+### Prototype
+**Purpose**: Creates new objects by cloning others.  
+**Usage**: Implements `ICloneable` in C#.
 
-Especifica los tipos de objetos a crear mediante una instancia prototípica y crea nuevos objetos copiando este prototipo.
+## Structural Patterns
 
-## Adapter
+### Adapter
+Connects incompatible interfaces.
 
-Permite que objetos con interfaces incompatibles trabajen juntos.
+### Decorator
+Adds functionalities dynamically.
 
-## Decorator
+### Proxy
+Controls access to an object (caching, lazy-loading).
 
-Adjunta responsabilidades adicionales a un objeto de manera dinámica.
+### Composite
+Treats individual and composite objects uniformly.
 
-## Observer
+### Flyweight
+Reduces memory usage by sharing instances.
 
-Define una dependencia uno a muchos entre objetos para que cuando un objeto cambie su estado, todos sus dependientes sean notificados y actualizados automáticamente.
+### Bridge
+Separates abstraction from implementation.
 
-## Strategy
+### Facade *(Suggested to be added)*
+Simplifies a complex interface.
 
-Define una familia de algoritmos, encapsula cada uno de ellos y los hace intercambiables.
+## Behavioral Patterns
 
-## Command
+### Observer
+Defines a one-to-many dependency (e.g., `INotifyPropertyChanged`).
 
-Encapsula una solicitud como un objeto, permitiendo parametrizar a los clientes con operaciones, poner en cola las solicitudes y soportar operaciones deshacer.
+### Strategy
+Encapsulates interchangeable algorithms.
 
-## State
+### Command
+Encapsulates a request as an object (ideal for `ICommand` in MVVM).
 
-Permite a un objeto alterar su comportamiento cuando su estado interno cambia.
+### State
+Changes object behavior based on its internal state.
 
-## Memento
+### Memento
+Captures internal state to restore it later.
 
-Captura y externaliza un estado interno de un objeto, de modo que el objeto pueda ser restaurado a ese estado más tarde.
+### Template Method
+Defines the skeleton of an algorithm.
 
-## Template Method
+### Chain of Responsibility
+Passes a request along a chain of handlers.
 
-Define el esqueleto de un algoritmo en una operación, postergando algunos pasos a las subclases.
+### Visitor
+Adds operations without modifying classes.
 
-## Chain of Responsibility
+### Interpreter
+Interprets a grammar-based language (e.g., mathematical expressions).
 
-Pasa la solicitud a lo largo de una cadena de manejadores. Permite que más de un objeto maneje la solicitud sin especificar explícitamente el receptor.
+## Applications in .NET and C#
 
-## Visitor
+- MVVM in WPF and Xamarin: Command, Observer, Strategy.  
+- ASP.NET Core: Dependency Injection (Abstract Factory), Middleware (Chain of Responsibility).  
+- Entity Framework: Unit of Work, Repository (also considered architectural patterns).
 
-Representa una operación que se realiza en los elementos de una estructura de objetos. Permite definir una nueva operación sin cambiar las clases de los elementos.
+## Professional and Advanced Level
 
-## Composite
+To master patterns in .NET:
 
-Compone objetos en estructuras de árbol para representar jerarquías parte-todo. Permite a los clientes tratar objetos individuales y composiciones de objetos de manera uniforme.
+- Understand SOLID principles and object-oriented design.
+- Use patterns with unit testing and TDD.
+- Study open-source projects on GitHub (e.g., `ASP.NET Core`, `AutoMapper`, `MediatR`).
+- Create your own patterns for recurring problems.
 
-## Proxy
+## Recommended Books and Resources
 
-Proporciona un sustituto o marcador de posición para otro objeto para controlar el acceso a él.
+- *Design Patterns: Elements of Reusable Object-Oriented Software* – GoF (Erich Gamma et al.)
+- *Head First Design Patterns* – Eric Freeman
+- *Patterns of Enterprise Application Architecture* – Martin Fowler
+- *Dependency Injection in .NET* – Mark Seemann
+- [Refactoring Guru – Design Patterns in C#](https://refactoring.guru/design-patterns/csharp)
+- [Microsoft Docs – Design Patterns](https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures)
 
-## Flyweight
+## References
 
-Minimiza el uso de memoria o cálculos compartiendo tanto como sea posible con objetos relacionados.
+- Gamma, E., Helm, R., Johnson, R., & Vlissides, J. (1994). *Design Patterns: Elements of Reusable Object-Oriented Software*.
+- Seemann, M. (2011). *Dependency Injection in .NET*.
+- Microsoft Learn: [https://learn.microsoft.com](https://learn.microsoft.com)
+- Refactoring Guru: [https://refactoring.guru](https://refactoring.guru)
 
-## Bridge
-
-Desacopla una abstracción de su implementación, de modo que las dos puedan variar independientemente.
-
-## Interpreter
-
-Proporciona una manera de evaluar el lenguaje gramatical de un idioma.
- 
